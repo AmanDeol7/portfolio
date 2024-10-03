@@ -47,14 +47,14 @@ const portfolioProjects = [
 
 export const ProjectsSection = () => {
   return (
-    <div className="container">
+    <div className="container lg:pt-28">
       <SectionHeader
         title="Projects"
         eyebrow="Selected Work"
         description="Here are a few projects I've worked on recently. "
       />
 
-      <div className=" flex flex-col mt-10 md:mt-20 ">
+      <div className=" flex flex-col mt-10 md:mt-20 lg:px-10 ">
         {portfolioProjects.map((project, projectIndex) => (
           <div
             key={projectIndex}

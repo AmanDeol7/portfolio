@@ -1,3 +1,15 @@
 export const Footer = () => {
-  return <div>Footer Section</div>;
+  return (<>
+  <footer>
+    <div className="container">
+
+      <div className="">
+        <div className="">&copy;</div>
+        <div className=""></div>
+      </div>
+    </div>
+  </footer>
+  
+  
+  </>);
 };
