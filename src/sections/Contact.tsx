@@ -8,9 +8,9 @@ export const ContactSection = () => {
      
       <div className="container lg:px-14">
      
-        <div className="bg-gradient-to-r from-emerald-300 to-sky-400 rounded-3xl p-8 md:p-8 text-gray-950">
+        <div className="bg-gradient-to-r from-emerald-300 to-sky-400 rounded-3xl p-8 md:p-8 text-gray-950 relative z-0">
 
-        <div className="absolute inset-0 " style={{backgroundImage: `url(${grainImage.src})`}}></div>
+        <div className="absolute inset-0  opacity-5 -z-10" style={{backgroundImage: `url(${grainImage.src})`}}></div>
           
           <div className="flex flex-col md:flex-row gap-10 md:gap-20">
             <div>
