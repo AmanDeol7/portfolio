@@ -58,7 +58,8 @@ export const ProjectsSection = () => {
         {portfolioProjects.map((project, projectIndex) => (
           <div
             key={projectIndex}
-            className="bg-gray-800 rounded-3xl relative mb-[5rem] z-0 after:z-10 overflow-hidden after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 px-8 pt-8 md:px-10 md:pt-10  after:pointer-events-none "
+            className="bg-gray-800 rounded-3xl relative mb-[5rem] z-0 after:z-10 overflow-hidden after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 px-8 pt-8 md:px-10 md:pt-10  after:pointer-events-none sticky top-16 "
+            style={{ top: `calc(64px + ${projectIndex * 40}px)` }}
           >
             <div
               className="absolute inset-0 -z-10 opacity-5"
