@@ -39,8 +39,8 @@ const experiences = [
 ]
 
 export function ExperienceSection() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const ref = useRef<HTMLElement>(null)
+  const isInView = useInView(ref as any, { once: true, margin: "-100px" })
 
   return (
     <section id="experience" ref={ref} className="py-32 px-6 relative">

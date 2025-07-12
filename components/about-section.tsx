@@ -13,8 +13,8 @@ const stats = [
 ]
 
 export function AboutSection() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const ref = useRef<HTMLElement>(null)
+  const isInView = useInView(ref as any, { once: true, margin: "-100px" })
 
   return (
     <section id="about" ref={ref} className="py-32 px-6 relative">

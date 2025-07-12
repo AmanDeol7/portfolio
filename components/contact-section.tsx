@@ -50,8 +50,8 @@ const socialLinks = [
 ]
 
 export function ContactSection() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const ref = useRef<HTMLElement>(null)
+  const isInView = useInView(ref as any, { once: true, margin: "-100px" })
   const [formData, setFormData] = useState({
     name: "",
     email: "",

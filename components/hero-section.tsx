@@ -7,8 +7,8 @@ import { Button } from "@/components/ui/button"
 import { ArrowDown, Github, Linkedin, Mail, Download } from "lucide-react"
 
 export function HeroSection() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true })
+  const ref = useRef<HTMLElement>(null)
+  const isInView = useInView(ref as any, { once: true })
   const controls = useAnimation()
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 
@@ -44,7 +44,6 @@ export function HeroSection() {
       opacity: 1,
       transition: {
         duration: 0.8,
-        ease: [0.23, 1, 0.32, 1],
       },
     },
   }
@@ -173,7 +172,6 @@ export function HeroSection() {
             }}
           >
             <Button
-              size="lg"
               className="bg-neutral-900 hover:bg-neutral-800 text-white px-8 py-4 rounded-none text-base font-light tracking-wide transition-all duration-300 border-0"
             >
               VIEW WORK
@@ -195,16 +193,14 @@ export function HeroSection() {
               cursor?.classList.remove("hover")
               dot?.classList.remove("hover")
             }}
-          ><a href="/aman-resume-final.pdf" target="_blank" rel="noopener noreferrer">
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-2 border-neutral-900 text-neutral-900 hover:bg-neutral-900 hover:text-white px-8 py-4 rounded-none text-base font-light tracking-wide transition-all duration-300 bg-transparent"
-
-            >
-              <Download className="w-4 h-4 mr-2" />
-              RESUME
-            </Button>
+          >
+            <a href="/aman-resume-final.pdf" target="_blank" rel="noopener noreferrer">
+              <Button
+                className="border-2 border-neutral-900 text-neutral-900 hover:bg-neutral-900 hover:text-white px-8 py-4 rounded-none text-base font-light tracking-wide transition-all duration-300 bg-transparent"
+              >
+                <Download className="w-4 h-4 mr-2" />
+                RESUME
+              </Button>
             </a>
           </motion.div>
         </motion.div>
